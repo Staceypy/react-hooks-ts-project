@@ -12,6 +12,11 @@ export interface IState{
 
 // redux
 // action对象的类型
+/**
+ * The payload property in the IAction interface is defined as a union type 
+ * that allows it to accept different types of data (ITodo, ITodo[], or number) as payloads
+ *  for different actions (INIT_TODOLIST, ADD_TODO, or UPDATE_COUNT). 
+ */
 export interface IAction{
     type: ACTION_TYPE,
     payload: ITodo | ITodo[] | number  // |符号值的是类型有可能为ITodo 也有可能为 number

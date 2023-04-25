@@ -8,6 +8,7 @@ const initialState:IState = {
     todoList:[]
 }
 
+// 惰性初始化，用function不用const
 function init(initTodoList: ITodo[]):IState{
     return {
         todoList: initTodoList
