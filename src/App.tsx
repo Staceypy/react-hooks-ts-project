@@ -4,7 +4,7 @@ import MyCheckbox from './components/MyCheckbox';
 import MyButton from './components/MyButton';
 function App() {
 
-  const doChange = (e) => {
+  const doChange = (e:any) => {
     console.log(e)
   }
 
@@ -13,16 +13,19 @@ function App() {
   }
 
   return (
+    <>
     <div className="App">
         <TodoList></TodoList>
     </div>
     <div>
     <MyCheckbox 
       checked={true}
-      onChange={doChange}></MyCheckbox>
+      onChange={doChange}>Checkbox</MyCheckbox>
     <MyButton type="success" onClick = {doClick}>按钮</MyButton>
 
     </div>
+    </>
+    
 
     
   );
